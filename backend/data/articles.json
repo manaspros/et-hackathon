@@ -1,0 +1,336 @@
+[
+  {
+    "id": "a001",
+    "title": "How to choose your first mutual fund in 2026",
+    "category": "mutual_fund_basics",
+    "stage_target": 2,
+    "summary": "Beginner guide: choosing MFs based on risk profile and tax goals",
+    "entities": [
+      "mutual fund",
+      "SIP",
+      "NAV",
+      "ELSS",
+      "risk profile"
+    ],
+    "sentiment": 0.65,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "a002",
+    "title": "ELSS vs PPF: Which gives better returns for tax saving?",
+    "category": "tax_saving",
+    "stage_target": 2,
+    "summary": "Comparing ELSS and PPF for 80C deductions with real numbers",
+    "entities": [
+      "ELSS",
+      "PPF",
+      "80C",
+      "tax saving",
+      "returns"
+    ],
+    "sentiment": 0.6,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "a003",
+    "title": "SIP step-up: How increasing \u20b9500/month changes your wealth",
+    "category": "sip_calculator",
+    "stage_target": 2,
+    "summary": "The power of annual SIP step-up illustrated with compound growth",
+    "entities": [
+      "SIP",
+      "step-up",
+      "compound interest",
+      "wealth"
+    ],
+    "sentiment": 0.75,
+    "date": "2026-03-10"
+  },
+  {
+    "id": "a010",
+    "title": "How to build a multi-fund portfolio \u2014 the 3-fund strategy",
+    "category": "portfolio_building",
+    "stage_target": 3,
+    "summary": "Diversify across large-cap, mid-cap, debt for risk-adjusted returns",
+    "entities": [
+      "portfolio",
+      "large-cap",
+      "mid-cap",
+      "diversification",
+      "debt fund"
+    ],
+    "sentiment": 0.7,
+    "date": "2026-03-22"
+  },
+  {
+    "id": "a011",
+    "title": "When should you review your mutual fund portfolio?",
+    "category": "portfolio_review",
+    "stage_target": 3,
+    "summary": "Annual review checklist: performance, overlap, rebalancing triggers",
+    "entities": [
+      "portfolio review",
+      "rebalancing",
+      "fund overlap",
+      "XIRR"
+    ],
+    "sentiment": 0.68,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "a020",
+    "title": "Equity investing for mutual fund investors \u2014 the natural next step",
+    "category": "equity_basics",
+    "stage_target": 4,
+    "summary": "When and how MF investors should consider direct equity stocks",
+    "entities": [
+      "demat",
+      "equity",
+      "fundamental analysis",
+      "P/E ratio",
+      "blue-chip"
+    ],
+    "sentiment": 0.65,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "a021",
+    "title": "How to open a demat account: step-by-step guide 2026",
+    "category": "demat_account_guide",
+    "stage_target": 4,
+    "summary": "Complete guide to opening demat with CDSL/NSDL, charges explained",
+    "entities": [
+      "demat",
+      "CDSL",
+      "NSDL",
+      "brokerage",
+      "KYC"
+    ],
+    "sentiment": 0.7,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "a022",
+    "title": "P/E ratio explained: how to judge if a stock is cheap or expensive",
+    "category": "pe_ratio_analysis",
+    "stage_target": 4,
+    "summary": "Understanding P/E, PEG, and EV/EBITDA for stock valuation",
+    "entities": [
+      "P/E ratio",
+      "valuation",
+      "stock analysis",
+      "PEG",
+      "EV/EBITDA"
+    ],
+    "sentiment": 0.72,
+    "date": "2026-03-12"
+  },
+  {
+    "id": "a030",
+    "title": "How to analyse quarterly results like a fund manager",
+    "category": "quarterly_results",
+    "stage_target": 5,
+    "summary": "Breaking down PAT, revenue growth, margins, guidance in Q3 results",
+    "entities": [
+      "quarterly results",
+      "PAT",
+      "revenue",
+      "margins",
+      "guidance",
+      "analyst"
+    ],
+    "sentiment": 0.74,
+    "date": "2026-03-25"
+  },
+  {
+    "id": "rbi001",
+    "title": "RBI cuts repo rate by 25 bps \u2014 third cut in 6 months",
+    "category": "rbi_policy",
+    "stage_target": 3,
+    "summary": "RBI MPC votes 4-2 to cut repo rate to 6.0%, cites easing inflation",
+    "entities": [
+      "RBI",
+      "repo rate",
+      "MPC",
+      "inflation",
+      "debt fund",
+      "FD",
+      "home loan"
+    ],
+    "sentiment": 0.7,
+    "date": "2026-03-25"
+  },
+  {
+    "id": "hdfc001",
+    "title": "HDFC Bank Q4 2026: Net profit up 18%, NIM holds steady",
+    "category": "quarterly_results",
+    "stage_target": 4,
+    "summary": "HDFC Bank posts \u20b916,512 Cr PAT, loan growth 15% YoY",
+    "entities": [
+      "HDFC Bank",
+      "Q4",
+      "profit",
+      "NIM",
+      "loan growth"
+    ],
+    "sentiment": 0.75,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "hdfc002",
+    "title": "HDFC Bank vs Kotak Mahindra: which is the better buy now?",
+    "category": "stock_screener",
+    "stage_target": 4,
+    "summary": "Valuation comparison: HDFC at 2.8x P/B vs Kotak at 3.2x P/B",
+    "entities": [
+      "HDFC Bank",
+      "Kotak",
+      "valuation",
+      "P/B ratio",
+      "comparison"
+    ],
+    "sentiment": 0.65,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "hdfc003",
+    "title": "HDFC Bank's loan growth strategy under new MD Sashidhar Jagdishan",
+    "category": "expert_analysis",
+    "stage_target": 5,
+    "summary": "CEO interview: retail vs corporate loan mix, rural expansion",
+    "entities": [
+      "HDFC Bank",
+      "Jagdishan",
+      "loan strategy",
+      "retail",
+      "rural"
+    ],
+    "sentiment": 0.78,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "hdfc004",
+    "title": "HDFC Bank net interest margin outlook for FY27 \u2014 analyst consensus",
+    "category": "expert_analysis",
+    "stage_target": 5,
+    "summary": "5 brokerages weigh in on NIM compression risk for HDFC Bank",
+    "entities": [
+      "HDFC Bank",
+      "NIM",
+      "FY27",
+      "analyst",
+      "Motilal Oswal",
+      "Kotak Securities"
+    ],
+    "sentiment": 0.62,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "jf001",
+    "title": "Reliance announces demerger of financial services arm",
+    "company": "Jio Financial",
+    "category": "corporate_news",
+    "stage_target": 4,
+    "summary": "Reliance Industries to spin off Jio Financial as independent entity",
+    "entities": [
+      "Reliance",
+      "Jio Financial",
+      "NBFC",
+      "Mukesh Ambani",
+      "demerger",
+      "BSE"
+    ],
+    "sentiment": 0.75,
+    "date": "2022-10-27"
+  },
+  {
+    "id": "jf002",
+    "title": "Jio Financial gets NBFC-ICC licence from RBI",
+    "company": "Jio Financial",
+    "category": "regulatory_news",
+    "stage_target": 4,
+    "summary": "RBI grants NBFC-Investment and Credit Company status",
+    "entities": [
+      "Jio Financial",
+      "RBI",
+      "NBFC",
+      "licence",
+      "financial services",
+      "regulatory"
+    ],
+    "sentiment": 0.82,
+    "date": "2023-03-15"
+  },
+  {
+    "id": "jf003",
+    "title": "Jio Financial lists at \u20b9262 \u2014 below grey market premium",
+    "company": "Jio Financial",
+    "category": "market_news",
+    "stage_target": 4,
+    "summary": "Stock debuts tepidly but analysts bullish on long-term digital finance story",
+    "entities": [
+      "Jio Financial",
+      "BSE",
+      "NSE",
+      "listing",
+      "analysts",
+      "grey market"
+    ],
+    "sentiment": 0.58,
+    "date": "2023-08-21"
+  },
+  {
+    "id": "jf004",
+    "title": "Jio Financial and BlackRock launch asset management JV",
+    "company": "Jio Financial",
+    "category": "business_news",
+    "stage_target": 5,
+    "summary": "JV to target India's \u20b950 lakh crore MF market with digital-first approach",
+    "entities": [
+      "Jio Financial",
+      "BlackRock",
+      "mutual fund",
+      "JV",
+      "SEBI",
+      "digital"
+    ],
+    "sentiment": 0.88,
+    "date": "2024-07-10"
+  },
+  {
+    "id": "jf005",
+    "title": "Jio Financial enters home loan market \u2014 threat to HDFC Bank?",
+    "company": "Jio Financial",
+    "category": "competitive_analysis",
+    "stage_target": 5,
+    "summary": "Digital home loans at 8.4% \u2014 analysts assess disruption risk to incumbents",
+    "entities": [
+      "Jio Financial",
+      "home loan",
+      "HDFC Bank",
+      "SBI",
+      "disruption",
+      "digital lending"
+    ],
+    "sentiment": 0.7,
+    "date": "2025-04-22"
+  },
+  {
+    "id": "jf006",
+    "title": "Jio Financial Q3 FY26: profit up 6%, digital lending crosses \u20b95,000 Cr",
+    "company": "Jio Financial",
+    "category": "quarterly_results",
+    "stage_target": 5,
+    "summary": "Quarterly results show profitable growth; digital loan book expanding",
+    "entities": [
+      "Jio Financial",
+      "Q3",
+      "profit",
+      "digital lending",
+      "AUM",
+      "growth"
+    ],
+    "sentiment": 0.68,
+    "date": "2026-01-20"
+  }
+]

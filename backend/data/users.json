@@ -1,0 +1,302 @@
+[
+  {
+    "id": "priya_001",
+    "name": "Priya Sharma",
+    "age": 26,
+    "city": "Mumbai",
+    "stage": 2,
+    "stage_label": "SIP Beginner",
+    "aa": {
+      "bank_balance": 85000,
+      "monthly_income": 65000,
+      "monthly_expenses": 42000,
+      "mutual_funds": [
+        {
+          "name": "Axis ELSS Tax Saver",
+          "category": "ELSS",
+          "sip_amount": 1500,
+          "current_value": 8900,
+          "sip_start_months_ago": 5
+        },
+        {
+          "name": "Mirae Asset Large Cap",
+          "category": "Large Cap",
+          "sip_amount": 1000,
+          "current_value": 4600,
+          "sip_start_months_ago": 4
+        }
+      ],
+      "fds": [
+        {
+          "bank": "SBI",
+          "amount": 50000,
+          "rate": 6.8,
+          "maturity_months": 8
+        }
+      ],
+      "stocks": [],
+      "loans": [],
+      "insurance": [
+        {
+          "type": "health",
+          "cover": 500000,
+          "premium": 8500
+        }
+      ]
+    },
+    "reading_history": [
+      {
+        "category": "mutual_fund_basics",
+        "count": 12,
+        "avg_depth": 0.78
+      },
+      {
+        "category": "sip_calculator",
+        "count": 6,
+        "avg_depth": 0.91
+      },
+      {
+        "category": "tax_saving",
+        "count": 4,
+        "avg_depth": 0.65
+      },
+      {
+        "category": "market_news",
+        "count": 3,
+        "avg_depth": 0.32
+      }
+    ],
+    "trajectory": {
+      "next_stage": 3,
+      "probability": 0.73,
+      "days": 90,
+      "key_signals": [
+        "5 months SIP age",
+        "reads MF basics deeply",
+        "tax saving searches"
+      ]
+    },
+    "is_prime": false,
+    "last_active": "2026-03-26",
+    "consecutive_days": 3
+  },
+  {
+    "id": "rahul_002",
+    "name": "Rahul Verma",
+    "age": 31,
+    "city": "Bangalore",
+    "stage": 3,
+    "stage_label": "Portfolio Builder",
+    "aa": {
+      "bank_balance": 145000,
+      "monthly_income": 120000,
+      "monthly_expenses": 75000,
+      "mutual_funds": [
+        {
+          "name": "Parag Parikh Flexi Cap",
+          "category": "Flexi Cap",
+          "sip_amount": 3000,
+          "current_value": 58000,
+          "sip_start_months_ago": 18
+        },
+        {
+          "name": "Nifty 50 Index Fund",
+          "category": "Index",
+          "sip_amount": 2000,
+          "current_value": 39000,
+          "sip_start_months_ago": 17
+        },
+        {
+          "name": "HDFC Mid Cap Opp.",
+          "category": "Mid Cap",
+          "sip_amount": 3000,
+          "current_value": 59000,
+          "sip_start_months_ago": 20
+        }
+      ],
+      "fds": [],
+      "stocks": [],
+      "loans": [],
+      "insurance": [
+        {
+          "type": "term",
+          "cover": 10000000,
+          "premium": 15000
+        },
+        {
+          "type": "health",
+          "cover": 1000000,
+          "premium": 12000
+        }
+      ]
+    },
+    "reading_history": [
+      {
+        "category": "market_news",
+        "count": 22,
+        "avg_depth": 0.81
+      },
+      {
+        "category": "stock_screener",
+        "count": 8,
+        "avg_depth": 0.76
+      },
+      {
+        "category": "pe_ratio_analysis",
+        "count": 5,
+        "avg_depth": 0.82
+      },
+      {
+        "category": "demat_account_guide",
+        "count": 3,
+        "avg_depth": 0.91
+      },
+      {
+        "category": "equity_investing",
+        "count": 4,
+        "avg_depth": 0.78
+      }
+    ],
+    "trajectory": {
+      "next_stage": 4,
+      "probability": 0.81,
+      "days": 45,
+      "key_signals": [
+        "demat search 3x this week",
+        "reads PE ratio deeply",
+        "18 months SIP experience",
+        "stock screener sessions"
+      ]
+    },
+    "is_prime": true,
+    "last_active": "2026-03-26",
+    "consecutive_days": 7
+  },
+  {
+    "id": "sneha_003",
+    "name": "Sneha Iyer",
+    "age": 35,
+    "city": "Delhi",
+    "stage": 5,
+    "stage_label": "Active Investor",
+    "aa": {
+      "bank_balance": 320000,
+      "monthly_income": 210000,
+      "monthly_expenses": 120000,
+      "mutual_funds": [
+        {
+          "name": "Mirae Asset Large Cap",
+          "category": "Large Cap",
+          "sip_amount": 10000,
+          "current_value": 285000,
+          "sip_start_months_ago": 48
+        },
+        {
+          "name": "Axis Small Cap",
+          "category": "Small Cap",
+          "sip_amount": 8000,
+          "current_value": 198000,
+          "sip_start_months_ago": 46
+        },
+        {
+          "name": "ICICI Pru Balanced Advantage",
+          "category": "Balanced",
+          "sip_amount": 7000,
+          "current_value": 167000,
+          "sip_start_months_ago": 39
+        }
+      ],
+      "fds": [
+        {
+          "bank": "HDFC",
+          "amount": 200000,
+          "rate": 7.0,
+          "maturity_months": 3
+        }
+      ],
+      "stocks": [
+        {
+          "symbol": "TCS",
+          "qty": 15,
+          "avg_price": 3200,
+          "current_price": 3580
+        },
+        {
+          "symbol": "HDFCBANK",
+          "qty": 30,
+          "avg_price": 1450,
+          "current_price": 1620
+        },
+        {
+          "symbol": "INFY",
+          "qty": 25,
+          "avg_price": 1380,
+          "current_price": 1520
+        },
+        {
+          "symbol": "RELIANCE",
+          "qty": 10,
+          "avg_price": 2400,
+          "current_price": 2850
+        }
+      ],
+      "loans": [
+        {
+          "type": "home_loan",
+          "emi": 35000,
+          "outstanding": 4200000,
+          "bank": "SBI",
+          "remaining_months": 168
+        }
+      ],
+      "insurance": [
+        {
+          "type": "term",
+          "cover": 20000000,
+          "premium": 22000
+        },
+        {
+          "type": "health",
+          "cover": 2000000,
+          "premium": 18500
+        }
+      ]
+    },
+    "reading_history": [
+      {
+        "category": "quarterly_results",
+        "count": 18,
+        "avg_depth": 0.88
+      },
+      {
+        "category": "expert_analysis",
+        "count": 12,
+        "avg_depth": 0.85
+      },
+      {
+        "category": "portfolio_review",
+        "count": 6,
+        "avg_depth": 0.91
+      },
+      {
+        "category": "macro_economics",
+        "count": 10,
+        "avg_depth": 0.82
+      }
+    ],
+    "trajectory": {
+      "next_stage": 6,
+      "probability": 0.58,
+      "days": 180,
+      "key_signals": [
+        "FD maturing in 3 months",
+        "home loan holder",
+        "tax optimization"
+      ],
+      "life_event": "FD of \u20b92L at HDFC maturing in 3 months \u2014 reinvestment decision"
+    },
+    "is_prime": true,
+    "last_active": "2026-03-10",
+    "consecutive_days": 0
+  }
+]

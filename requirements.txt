@@ -1,0 +1,29 @@
+# Core UI
+streamlit==1.40.0
+plotly==5.24.0
+pyvis==0.3.2
+networkx==3.4.0
+
+# ML / Embeddings
+sentence-transformers==3.3.0
+faiss-cpu==1.8.0
+chromadb==0.5.20
+xgboost==2.1.0
+scikit-learn==1.5.0
+transformers==4.46.0
+torch==2.4.0
+
+# Graph RAG (fast version)
+fast-graphrag
+
+# LLMs
+anthropic==0.36.0
+groq==0.11.0
+
+# Data
+faker==33.0.0
+pandas==2.2.0
+numpy==1.26.4
+python-dotenv==1.0.0
+sqlalchemy==2.0.0
+requests==2.32.0
