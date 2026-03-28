@@ -1,6 +1,6 @@
 # Demo Personas
 
-Three real personas that cover the full financial journey. Each sees a completely different My ET experience.
+Three real personas that cover the full financial journey. Each sees a completely different News Navigator briefing.
 
 ---
 
@@ -21,17 +21,20 @@ Age: 26 | City: Mumbai | Income: ₹45,000/month
 
 **Trajectory Prediction:** 73% probability of reaching Stage 3 in 90 days
 
-**What My ET Shows Her:**
-- Feed: MF basics + "How to choose your next fund" (anticipatory for Stage 3)
-- Sidebar: "₹13,500 portfolio | SBI FD matures Aug 2026"
-- Paywall threshold: 72 (high — she's new, needs gentle nudge)
-- Paywall offer: "Curious where your SIP is going? ET Prime's fund tracker shows you."
+**Her News Navigator Briefing:**
+> "Good morning Priya. 2 things for you today:"
+> 1. "Your HDFC Mid-Cap fund gained 2.3% this month → Portfolio: ₹13,500 (+₹310)"
+> 2. "How to choose your next fund → You're ready for a second SIP" (anticipatory)
+>
+> **Ask ET:** "Is one SIP enough?" → "At ₹2,500/month, you'll have ₹1.8L in 5 years. Adding a large-cap fund diversifies risk. Here's how..."
 
-**What She Demonstrates:** Anticipatory content — showing Stage 3 prep content to a Stage 2 user.
+**Paywall threshold:** 72 (high — she's new, needs gentle nudge)
+
+**What She Demonstrates:** Anticipatory briefing — preparing Stage 2 for Stage 3.
 
 ---
 
-## Rahul Verma — Stage 3: Portfolio Builder
+## Rahul Verma — Stage 3: Portfolio Builder (PRIMARY DEMO)
 
 ```
 Age: 31 | City: Bangalore | Income: ₹1,20,000/month
@@ -48,13 +51,17 @@ Age: 31 | City: Bangalore | Income: ₹1,20,000/month
 
 **Trajectory Prediction:** 81% probability of reaching Stage 4 (equity explorer) in 45 days
 
-**What My ET Shows Him:**
-- Feed: Portfolio updates + "How to open a demat account" + "Understanding PE ratios" (anticipatory)
-- Sidebar: "₹1,56,000 across 3 MF schemes | Next step: demat?"
-- Paywall threshold: 68 (medium — he's actively researching)
-- Paywall offer: "You're researching equity. ET Prime's stock screener has 450+ stocks rated by analysts."
+**His News Navigator Briefing:**
+> "Good morning Rahul. 3 things affecting your portfolio today:"
+> 1. "RBI cut repo rate to 6.0% → Your 3 debt funds gain ~0.3%. Net impact: +₹470"
+> 2. "Nifty crossed 24,000 → Your index fund (Motilal Nifty50) is up 1.2% this week"
+> 3. "How to open a demat account → You're 45 days from needing this" (anticipatory)
+>
+> **Ask ET:** "Which broker should I pick for my first demat?" → "Based on your portfolio size (₹1.56L) and SIP pattern, Zerodha or Groww offer the lowest costs. Here's ET's comparison..."
 
-**What He Demonstrates:** The core demo persona — active reader, mid-journey, clear next step visible.
+**Paywall threshold:** 68 (medium — he's actively researching)
+
+**What He Demonstrates:** The core demo — briefing with portfolio impact + anticipatory content + Ask ET.
 
 ---
 
@@ -75,33 +82,41 @@ Age: 35 | City: Delhi | Income: ₹2,50,000/month
 
 **Trajectory Prediction:** Stage 5 stable (68% stay), life event: FD maturing in 3 months
 
+**Her News Navigator Briefing (if she were active):**
+> "Good morning Sneha. 3 things for your portfolio:"
+> 1. "Infosys Q3 beat estimates → You hold 50 shares. Impact: +₹8,200"
+> 2. "HDFC FD matures Jun 2026 → ₹2L decision: roll over at 6.8% or move to liquid fund at 7.2%?"
+> 3. "Home loan prepayment calculator → With your surplus, prepaying ₹1L saves ₹4.2L in interest"
+>
+> **Ask ET:** "Should I break my FD early?" → "Your HDFC FD (₹2L, 7.0%) matures in 3 months. Breaking early costs 1% penalty (₹2,000). New rate: 6.8%. Hold to maturity — the ₹200 difference isn't worth the penalty."
+
 **Dark Subscriber Status:**
 - ET Prime subscriber since 2024
 - Last login: 18 days ago
 - Revenue at risk: ₹2,549/year
-- Win-back article (FAISS): "Infosys Q3 Results — What It Means for Your Holdings"
+- FAISS win-back article: "Infosys Q3 Results — What It Means for Your Holdings"
 
-**What My ET Shows Her:**
-- Feed: "HDFC FD Maturity Alert" + quarterly results for her stocks
-- Sidebar: "₹9.8L portfolio | 4 stocks | HDFC FD matures Jun 2026"
-- Paywall threshold: 60 (low — she's high value, fire earlier)
-- Paywall offer: "This analysis affects 3 stocks in your portfolio. Your ET Prime subscription includes real-time alerts."
+**Paywall threshold:** 60 (low — she's high value, fire earlier)
 
-**What She Demonstrates:** Dark subscriber reactivation + portfolio-relevant paywall + life event detection.
+**What She Demonstrates:** Dark subscriber reactivation + portfolio-aware briefing + life event detection.
 
 ---
 
 ## How to Use in Demo
 
 **Start with Rahul** — he's the clearest before/after story.
-- ET Today: generic feed, article counter paywall
-- My ET: anticipatory feed, portfolio sidebar, smart paywall
+1. ET Today: generic feed, article counter paywall
+2. Toggle to My ET: News Navigator briefing appears
+3. Show the 3 briefing cards with his actual portfolio numbers
+4. Tap a card → drill-down with analysis
+5. Type in "Ask ET" → get a grounded, personalized answer
+6. Scroll deeper into article → PeakMoment AI fires at peak
 
 **Switch to Sneha** — she's the business case.
-- Dark subscriber dashboard shows her as inactive
-- Revenue at risk calculation
+- Dark subscriber dashboard shows her inactive
 - FAISS finding her perfect re-engagement article
+- Her briefing would have caught the Infosys Q3 results
 
 **End with Priya** — she's the growth story.
-- Stage 2 today, Stage 3 predicted in 90 days
-- Show how anticipatory content works for beginners
+- Anticipatory briefing preparing her for Stage 3
+- Ask ET answering her beginner questions with her actual data

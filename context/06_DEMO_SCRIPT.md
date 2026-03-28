@@ -3,9 +3,9 @@
 ## Setup Before Demo
 
 ```bash
-# Terminal 1: ML scoring
+# Terminal 1: FastAPI backend (briefing + Ask ET + ML scoring)
 python backend/ml/train_paywall_model.py   # once
-uvicorn backend.ml.scoring_api:app --port 8001
+uvicorn backend.api:app --port 8001
 
 # Terminal 2: React frontend
 cd my-et-frontend && npm run dev
@@ -20,95 +20,86 @@ streamlit run frontend/app.py --server.port 8501
 
 ## The 3-Minute Flow
 
-### 0:00 — 0:20 | The Hook
+### 0:00 — 0:15 | The Hook
 
 Open `localhost:5173`. Toggle is on **"ET Today"**.
 
-**Say:** *"This is how ET looks today. Same homepage for 30 million users. Moneycontrol beats ET 5.2x on time-spent. We're going to show you why — and how we fix it."*
+**Say:** *"This is how 30 million people read ET today. Same homepage. Same articles. Same format since 2005. Moneycontrol beats ET 5.2x on time-spent. Here's why — and here's the fix."*
 
-### 0:20 — 0:50 | The Toggle Moment
+### 0:15 — 0:50 | The News Navigator Moment (THE WOW)
 
-Click **"✨ My ET"**. Select **Rahul** as persona.
+Click **"My ET"**. Select **Rahul** as persona.
 
-**What changes visually:**
-- Sidebar transforms → AA portfolio appears (₹1,56,000 across 3 MF schemes)
-- Feed changes → anticipatory articles appear ("How to open a demat account")
-- Stage badge visible → "Stage 3 → 81% Stage 4 in 45 days"
+**What changes:**
+- The article feed DISAPPEARS
+- A **personalized intelligence briefing** appears:
+  > "Good morning Rahul. 3 things affecting your portfolio today:"
+  > 1. "RBI cut repo rate → Your 3 debt funds gain +₹470"
+  > 2. "Nifty crossed 24,000 → Your index fund up 1.2% this week"
+  > 3. "How to open a demat account → You're 45 days from needing this"
+- AA sidebar shows: ₹1,56,000 across 3 MF schemes
+- Stage badge: "Stage 3 → 81% Stage 4 in 45 days"
 
-**Say:** *"Same layout. Same branding. But now ET knows Rahul holds ₹1.56 lakh in 3 mutual fund schemes — via Account Aggregator. And because he's been searching 'demat account' and 'PE ratio,' we predict he's 45 days away from buying his first stock. So we show him equity content NOW — before he searches for it."*
+**Say:** *"Rahul doesn't see 20 articles. He sees 3 things that affect HIS portfolio — with HIS actual numbers from Account Aggregator. Item 3 is anticipatory: our trajectory engine predicts he's 45 days from opening a demat account, so we show him that content NOW."*
 
-### 0:50 — 1:30 | The Article + Smart Paywall
+### 0:50 — 1:20 | Ask ET (Interactive Intelligence)
 
-Click an article (RBI rate cut or HDFC Bank). Start scrolling slowly.
+Tap on briefing card 1 (RBI rate cut) → it expands with analysis + portfolio impact.
 
-**Point to the IntentGraph** on the right sidebar:
-- P(subscribe) starts at 8%
-- As you scroll deeper, it climbs: 15%... 28%... 42%...
-- Scroll back up (re-read a paragraph) — P jumps to 67%
-- The graph turns green → "⚡ Peak detected"
-- Paywall fires with reason: "Detected 2 re-reads — deeply engaged"
+Then type in **"Ask ET"** chat: *"Should I move my FD to a liquid fund?"*
 
-**Say:** *"Every 200 milliseconds, we collect 8 behavioral signals. A pre-trained ML model scores the probability of subscription. We don't fire at a fixed threshold — we find the PEAK of the probability curve. Optimal stopping theory. Not before the user is invested. Not after they've gotten the value. At the exact peak."*
+Answer streams in: *"Based on your portfolio... At the new 6.0% repo rate..."*
 
-**Point to the paywall comparison at the bottom:**
-- ❌ Generic ET: "Article counter: 1/3"
-- ✅ PeakMoment AI: "P(subscribe) = 67%"
+**Say:** *"This is what 'Interactive Intelligence Briefing' means. Not reading an article and hoping the answer is in there. ASKING your question and getting an answer grounded in ET's journalism — personalized with your actual data. Bloomberg does this for ₹20 lakh a year. We do it for ₹2,549."*
 
-### 1:30 — 2:10 | Switch to Sneha + Dark Subscriber
+### 1:20 — 1:50 | Smart Paywall (Drill-Down)
 
-Switch persona to **Sneha**. Open Streamlit (`localhost:8501`).
+Click "Read full analysis" on the expanded briefing card → full article opens.
+Start scrolling slowly. Point to the IntentGraph sidebar:
+- P(subscribe) climbing: 15%... 32%... 58%...
+- Scroll back up (re-read) → spike to 71%
+- Paywall fires: "Detected 2 re-reads — deeply engaged"
 
-Navigate to **Dark Subscriber** page.
+**Say:** *"The briefing is free. The deep analysis is Prime. And the paywall doesn't fire after 3 articles — it fires at the PEAK of engagement. Optimal stopping theory. For Rahul, that's when he re-reads the rate impact paragraph."*
 
-**What judges see:**
-- Sneha: 18 days inactive, ET Prime subscriber
-- Revenue at risk: ₹2,549/year
-- FAISS found her best article: "Infosys Q3 Results" (she holds Infosys)
-- Push notification preview with loss aversion framing
+### 1:50 — 2:20 | Story Arc Tracker
 
-**Say:** *"33% of ET Prime subscribers go dark within 24 hours. That's ₹38 crore a year leaving silently. Our system finds each dormant subscriber's one article — the exact one most likely to bring them back. For Sneha, it's Infosys Q3 results. She holds Infosys. FAISS found this match in under 50 milliseconds."*
+Open Streamlit. Navigate to **Story Arc** → select "Jio Financial."
 
-### 2:10 — 2:40 | Story Arc Tracker
+**What judges see:** Timeline, sentiment river (FinBERT), character network, predictions.
 
-Navigate to **Story Arc** page. Select "Jio Financial."
+**Say:** *"Every business story is 10 disconnected articles on ET. This is the same story as a narrative — FinBERT scores sentiment, NetworkX maps the key players, and the system predicts what's next. Tap 'Jio Financial' in your briefing and this is what loads."*
 
-**What judges see:**
-- Timeline: 2022 → 2026 with sentiment river
-- FinBERT sentiment scores per article
-- Character network graph (Jio Financial → Ambani → RBI → BlackRock)
-- Velocity indicator: coverage accelerating
-- Predictive: "What ET is watching next"
+### 2:20 — 2:40 | Dark Subscriber (Business Case)
 
-**Say:** *"Every business story is 10 disconnected articles on ET today. This is the same story as a narrative. FinBERT scores sentiment. NetworkX maps the characters. And the system predicts what's next. This is what 'Story Arc Tracker' from the problem statement looks like when you build it."*
+Switch to **Dark Subscriber** page. Select Sneha.
+
+**Say:** *"Sneha was a Prime subscriber. 18 days inactive. ₹2,549/year at risk. FAISS found her one article: Infosys Q3 results — she holds Infosys. If she'd had the News Navigator briefing, she would have seen 'Infosys Q3 beat → your 50 shares gained ₹8,200' on day 1. She never would have gone dark."*
 
 ### 2:40 — 3:00 | The Close
 
-**Show the 4 numbers:**
+**Say:** *"Five layers. One experience. Account Aggregator knows your financial life. News Navigator gives you a briefing, not a feed. You can ASK it questions. The Trajectory Engine predicts your next move. Story Arc makes narratives visual. And PeakMoment fires the paywall at the mathematical peak — not after 3 articles."*
 
-| Metric | Value |
-|---|---|
-| Time-spent gap | 5.2x (Moneycontrol vs ET) |
-| Unrealized revenue | ₹825 Cr |
-| Dark subscriber risk | ₹38 Cr/year |
-| FT benchmark | +92% conversion with AI paywall |
-
-**Say:** *"Five layers. One experience. Account Aggregator gives ET your actual financial life. Trajectory engine predicts where you're going. Story Arc makes narratives explorable. Dark subscriber AI prevents churn. And PeakMoment fires the paywall at the mathematically optimal moment. We didn't build features — we built the news experience that makes you say 'I can't go back.'"*
+*"We didn't build features. We built the experience that makes you say: I can't go back to reading news the old way."*
 
 ---
 
-## Anticipated Judge Questions + Answers
+## Anticipated Judge Questions
 
-**"How is this different from the FT paywall?"**
-> "FT uses a single threshold for all professional users. We use per-user thresholds based on financial life stage — a Stage 2 beginner gets a different threshold than a Stage 5 active investor. And we find the PEAK of the probability, not just when it crosses a threshold."
+**"How is Ask ET different from ChatGPT?"**
+> "ChatGPT hallucinates. Ask ET answers are grounded in ET's published articles — every answer has a source citation. And it knows your portfolio via AA. ChatGPT can't tell Rahul that his specific debt funds gain 0.3% from the rate cut."
+
+**"The briefing is just a summary — why not just write better headlines?"**
+> "Headlines inform. Briefings enable decisions. 'RBI cuts rate to 6%' is a headline. 'Your 3 debt funds gain ₹470, your FD rate drops to 6.8%, net impact positive' is an intelligence briefing. The difference is YOUR data."
+
+**"How is this different from Bloomberg Terminal?"**
+> "Bloomberg costs ₹20 lakh/year and targets institutional traders. We target India's 185 million retail investors at ₹2,549/year. Same BLUF format, same portfolio-awareness, but for the SIP investor — not the hedge fund."
 
 **"Is the AA data real?"**
-> "It's mock data structured exactly like AA responses. India has 2.61 billion AA-enabled accounts. The integration is a REST API call — the intelligence is what we do with the data, not the data itself."
+> "Mock data in the exact AA response format. India has 2.61 billion AA-enabled accounts. The integration is a REST API call. The innovation is what we DO with the data — portfolio-aware briefings that no publisher has built."
 
-**"The model was trained on synthetic data — is it valid?"**
-> "The synthetic data captures real behavioral patterns documented in Piano Analytics and Chartbeat research. The signal weights are interpretable — scroll reversals have the highest weight because re-reading is the strongest engagement signal across all publisher research. In production, you'd train on real ET user data."
+**"What about the model trained on synthetic data?"**
+> "The behavioral signals (scroll reversals, dwell time) are documented across Piano Analytics and Chartbeat research. In production, you train on real ET sessions. The demo shows the architecture, not final weights."
 
-**"Why not use deep learning?"**
-> "Interpretability. We can show you that scroll reversals have weight +1.8 and fast scrolling has weight -0.8. A neural net gives you a number with no explanation. For a paywall that users can see, transparency builds trust."
-
-**"What about privacy?"**
-> "All behavioral signals are collected client-side and processed in real-time. Nothing is stored. The intent score is shown transparently in the UI — the user sees exactly why the paywall fired."
+**"Why not use a transformer/deep learning model?"**
+> "Interpretability. We show scroll reversals have weight +1.8. A neural net is a black box. For a paywall, transparency builds trust."

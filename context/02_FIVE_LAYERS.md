@@ -9,17 +9,22 @@ User opens My ET
       ↓
 [Layer 1] AA Profile → "Rahul holds ₹1.56L in 3 MF schemes"
       ↓
-[Layer 2] Trajectory → "Stage 3 → 81% Stage 4 in 45 days"
+[Layer 2] NEWS NAVIGATOR → "3 things affecting your portfolio today"
+      ├── Briefing card 1: "RBI cut rates → your debt funds gain +0.3%"
+      ├── Briefing card 2: "HDFC Q3 results → you hold this stock"
+      └── Briefing card 3: "Demat accounts 101 → preparing you for Stage 4"
       ↓
-[Layer 2] Feed → 3 current articles + 2 anticipatory (equity basics)
+User taps briefing card → expands inline → asks follow-up question
       ↓
-User clicks article → [Layer 5] Scroll tracking begins
+[Layer 2] "Ask ET" → "Should I move my FD to a liquid fund?" → grounded answer
       ↓
-User reads deeply → [Layer 5] P(subscribe) = 74% → Paywall fires
+User goes deeper → full article → [Layer 5] Scroll tracking + smart paywall
       ↓
-[Layer 4] Sneha is dark → Win-back: one perfect article
+[Layer 3] Financial Trajectory → anticipatory content in briefing + feed
       ↓
-[Layer 3] Story Arc → Jio Financial visual narrative
+[Layer 4] Story Arc → "Jio Financial: the full narrative" (visual)
+      ↓
+[Layer 5] Paywall fires at peak engagement (not article count)
 ```
 
 ---
@@ -28,7 +33,7 @@ User reads deeply → [Layer 5] P(subscribe) = 74% → Paywall fires
 
 **PS8 maps to:** "My ET — The Personalized Newsroom" (data foundation)
 
-**What it does:** Mock AA integration gives ET the user's actual financial life — SIPs, FDs, stocks, loan EMIs. Every article is scored for portfolio relevance.
+**What it does:** Mock AA integration gives ET the user's actual financial life — SIPs, FDs, stocks, loan EMIs. Every briefing item and article is scored for portfolio relevance.
 
 **What judges see:**
 - ET Today sidebar → generic Sensex/Nifty numbers (same for everyone)
@@ -40,11 +45,79 @@ User reads deeply → [Layer 5] P(subscribe) = 74% → Paywall fires
 
 ---
 
-## Layer 2: Financial Trajectory Engine
+## Layer 2: News Navigator — Interactive Intelligence Briefings (CORE LAYER)
 
-**PS8 maps to:** "My ET — The Personalized Newsroom" (intelligence layer)
+**PS8 maps to:** "News Navigator — Interactive Intelligence Briefings" (directly from PS)
 
-**What it does:** Classifies users into financial stages (1-8) and serves content for the NEXT stage, not the current one.
+**What it does:** Replaces the passive article feed with a personalized, interactive intelligence briefing. Users don't scroll through 20 articles — they get 3-5 structured briefing items tailored to their portfolio + financial stage, with the ability to drill down and ask questions.
+
+### What Is an Intelligence Briefing?
+
+Borrowed from military/intelligence and financial services (Bloomberg Terminal, Reuters Eikon):
+
+| Dimension | Traditional Article (ET Today) | Intelligence Briefing (My ET) |
+|---|---|---|
+| Structure | Inverted pyramid narrative | **BLUF** (Bottom Line Up Front) → evidence → implications |
+| Purpose | Inform broadly | **Enable a decision or action** |
+| Length | 800-1500 words of prose | Concise: what happened, how it affects YOU, what to do |
+| Personalization | Same for everyone | Tailored to your holdings, stage, life events |
+| Interactivity | Read and leave | **Expand, ask, drill down** |
+| Source | Single article | **Synthesized from multiple articles + your AA data** |
+
+### The Three Parts of News Navigator
+
+**Part A: Morning Briefing**
+When a user opens My ET, they don't see a feed of 20 articles. They see:
+> "Good morning Rahul. 3 things affecting your portfolio today:"
+> 1. "RBI cut repo rate to 6.0% → Your 3 debt funds gain ~0.3%. Your SBI FD rate drops from 7.0% to 6.8%."
+> 2. "HDFC Bank Q3 beat estimates → You don't hold this, but Nifty50 (your index fund) includes it."
+> 3. "How to open a demat account → You're 45 days from needing this." (anticipatory, from Layer 3)
+
+Each item is a card — BLUF format. Not an article link. A synthesized briefing with YOUR numbers.
+
+**Part B: Interactive Drill-Down**
+Tap any briefing card → it expands inline with:
+- Full analysis (first few paragraphs free, rest behind paywall)
+- Portfolio impact calculation (from Layer 1 AA data)
+- Sentiment trend (from Layer 4 FinBERT)
+- Related briefing items
+
+**Part C: "Ask ET" — Conversational Q&A**
+A chat interface at the bottom of the briefing. Powered by Groq (llama-3.3-70b) with RAG over the article corpus.
+
+User asks: *"Should I break my FD early given the rate cut?"*
+ET answers: *"Based on your SBI FD (₹50,000, 7.0%, matures Aug 2026): Breaking early incurs a 1% penalty. At the new 6.8% rate, rolling over saves you ₹100 over 5 months. ET's recommendation: hold to maturity. [Source: ET Markets analysis, Mar 28 2026]"*
+
+The answer is grounded in ET articles + personalized with AA data. This is what makes it "interactive intelligence" — not just reading, but ASKING.
+
+### What judges see:
+| ET Today | My ET (News Navigator) |
+|---|---|
+| 20 article links in a feed | 3 personalized briefing cards |
+| Click → read full article | Tap → inline expansion with YOUR portfolio impact |
+| No way to ask questions | "Ask ET" chat with grounded answers |
+| Same for everyone | Briefing synthesized from AA + stage + article corpus |
+
+### Why this is the CORE layer:
+This is what PS8 is actually asking for — "build something that makes people say 'I can't go back to reading news the old way.'" The briefing IS the new way. Articles are 2005. Briefings with drill-down + Q&A are 2026.
+
+**What it is NOT:** A filtered feed of article links. It's a SYNTHESIZED briefing you can interact with.
+
+**Real-world precedents:**
+- Bloomberg Terminal: BLUF alerts linked to portfolio positions
+- FT "Ask FT": Conversational Q&A grounded in FT journalism
+- TIME AI Agent: RAG over 100+ years of archives
+- Forbes Adelaide: AI assistant for business news
+
+**Files:** `backend/layers/layer2_news_navigator.py`, `my-et-frontend/src/components/NewsBriefing.jsx`, `my-et-frontend/src/components/AskET.jsx`
+
+---
+
+## Layer 3: Financial Trajectory Engine
+
+**PS8 maps to:** "My ET — The Personalized Newsroom" (anticipatory intelligence)
+
+**What it does:** Classifies users into financial stages (1-8) and predicts their NEXT stage. Feeds anticipatory content into the News Navigator briefing.
 
 **The 8 stages:**
 | Stage | Label | Example |
@@ -58,21 +131,18 @@ User reads deeply → [Layer 5] P(subscribe) = 74% → Paywall fires
 | 7 | Wealth Manager | Tax optimization, estate planning |
 | 8 | HNI | Alternate investments, PE/VC |
 
-**What judges see:**
-| ET Today (Reactive) | My ET (Anticipatory) |
-|---|---|
-| 5 MF articles (what you already read) | 3 MF + 2 equity prep articles |
-| Content for where you ARE | Content for where you're GOING |
-
-**Key insight:** Rahul is Stage 3 with 81% probability of reaching Stage 4 (equity) in 45 days. We show him equity content NOW — before he searches for it.
+**How it feeds Layer 2 (News Navigator):**
+Rahul is Stage 3 with 81% probability of reaching Stage 4 in 45 days. So his briefing includes:
+- Briefing item 3: "How to open a demat account" (anticipatory — he'll need this in 45 days)
+- This appears alongside portfolio-relevant items, not as a separate "recommended" section
 
 **What it is NOT:** A topic filter ("show me more tech news"). It predicts your financial future.
 
-**Files:** `backend/layers/layer3_trajectory.py`, `my-et-frontend/src/components/ArticleCard.jsx`
+**Files:** `backend/layers/layer3_trajectory.py`, integrated into briefing generation
 
 ---
 
-## Layer 3: Story Arc Tracker
+## Layer 4: Story Arc Tracker
 
 **PS8 maps to:** "Story Arc Tracker" (directly in problem statement)
 
@@ -85,6 +155,9 @@ User reads deeply → [Layer 5] P(subscribe) = 74% → Paywall fires
 - **Pivot detection** → moments when sentiment shifted
 - **Predictions** → what ET is watching next
 
+**How it connects to Layer 2 (News Navigator):**
+When a briefing card mentions "Jio Financial," the user can tap "See full story arc" → visual narrative loads. The briefing is the starting point; the story arc is the deep dive.
+
 **What judges see:** Not 10 separate articles about Jio Financial. One visual that shows the ENTIRE story — where it came from, who drove it, where it's going.
 
 **What it is NOT:** A timeline of article links.
@@ -93,32 +166,16 @@ User reads deeply → [Layer 5] P(subscribe) = 74% → Paywall fires
 
 ---
 
-## Layer 4: Dark Subscriber Reactivation
-
-**PS8 maps to:** Business impact + scalability evaluation
-
-**What it does:** AI identifies dormant ET Prime subscribers and finds the ONE article most likely to bring them back using FAISS similarity search against their reading history.
-
-**How it works:**
-1. User hasn't opened ET in 14+ days → flagged as "dark"
-2. Their past reading history → encoded via `all-MiniLM-L6-v2`
-3. FAISS cosine similarity against new article corpus
-4. Best match → personalized win-back notification
-5. 4-step sequence with loss aversion framing
-
-**What judges see:** Sneha (18 days inactive). Revenue at risk: ₹2,549/year. FAISS finds her best re-engagement article: "Infosys Q3 Results" (she held Infosys). Push notification preview.
-
-**What it is NOT:** A generic "we miss you" email blast.
-
-**Files:** `backend/layers/layer6_dark_sub.py`, `frontend/pages/4_💤_Dark_Subs.py`
-
----
-
 ## Layer 5: PeakMoment AI — Smart Paywall
 
-**PS8 maps to:** "News Navigator — Interactive Intelligence Briefings" (the paywall IS the briefing tease)
+**PS8 maps to:** Monetization of the news experience
 
-**What it does:** Instead of "you've read 3 articles, subscribe," the system tracks real-time reading behavior and fires the paywall at the mathematically optimal moment.
+**What it does:** When a user drills down from a briefing card into a full article, the system tracks real-time reading behavior and fires the paywall at the mathematically optimal moment.
+
+**How it connects to Layer 2 (News Navigator):**
+- The briefing is FREE (BLUF summaries, portfolio impact, basic Q&A)
+- The full article analysis is PRIME (deep analysis, analyst views, recommendations)
+- The paywall fires when the user is most engaged with the drill-down — not after an article count
 
 **Signals collected every 200ms:**
 | Signal | What It Measures | Why It Matters |
@@ -140,16 +197,9 @@ P over time → Optimal Stopping Detector → Fire at PEAK
 
 **Per-user thresholds:** Priya = 72 (gentle), Rahul = 68 (medium), Sneha = 60 (aggressive — she's high value)
 
-**Fires when:**
-1. P(subscribe) peaks (was rising, now falling) AND P ≥ threshold
-2. OR scroll reversals ≥ 2 (re-reading proven intent)
-3. OR paragraph dwell > 60s (deep engagement)
-4. OR exit signal detected (velocity spike + high P)
-5. OR at hook paragraph + slow reading
-
 **What judges see:**
 - ET Today: "You've read 3 articles. Subscribe." (same for everyone)
-- My ET: "You've been reading HDFC Bank research for 4 minutes, re-reading paragraphs. Here's what our analysts found." (personalized, with reason)
+- My ET: "You've been reading HDFC Bank research for 4 minutes. Here's what our analysts found." (fires at peak engagement, with context)
 
 **What it is NOT:** A counter after 3 articles.
 
@@ -157,12 +207,18 @@ P over time → Optimal Stopping Detector → Fire at PEAK
 
 ---
 
-## How They Work Together
+## How the 5 Layers Connect
 
-The 5 layers aren't independent features — they're a pipeline:
+```
+Layer 1 (AA) ──→ Layer 2 (News Navigator) ← THIS IS THE PRODUCT
+                  ├── Uses AA data for portfolio-aware briefings
+                  ├── Uses Layer 3 (Trajectory) for anticipatory content
+                  ├── Links to Layer 4 (Story Arc) for deep dives
+                  └── Layer 5 (Paywall) monetizes the drill-down
+```
 
-1. **Layer 1** (AA data) feeds into **Layer 2** (stage classification) — you can't predict someone's financial future without knowing their present
-2. **Layer 2** (trajectory) feeds into **Layer 5** (paywall) — the stage determines the threshold and the offer copy
-3. **Layer 3** (story arc) provides the CONTENT that makes users subscribe — deep narratives you can't get elsewhere
-4. **Layer 4** (dark sub) uses **Layer 1** (AA data) to find the right win-back article — portfolio relevance drives re-engagement
-5. **Layer 5** (paywall) is the monetization of everything — it converts the great experience into revenue
+The News Navigator is the HUB. Every other layer feeds into it or extends it:
+- **Layer 1** provides the data (what you hold)
+- **Layer 3** provides the intelligence (where you're going)
+- **Layer 4** provides the depth (full story narratives)
+- **Layer 5** provides the monetization (paywall at peak engagement)
