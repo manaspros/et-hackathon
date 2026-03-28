@@ -237,7 +237,7 @@ async def score_signals(payload: dict):
     decision = detector.update(p, signals)
 
     return {
-        "p":             decision.get("p", round(p, 3)),
+        "p":             decision["p"],
         "fire":          decision["fire"],
         "reason":        decision.get("reason", "monitoring"),
         "reason_human":  decision.get("reason_human", ""),
